@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UngDungChuyenDoiTien</title>
+</head>
+<body>
+    <form>
+        Amount<br>
+        <input type="number" id="amount" /><br>
+
+        <br>From Currency<br>
+        <select type="text" id="from">
+            <option value="VND">VietNam</option>
+        </select><br>
+
+        <br>To Currency<br>
+        <select type="text" id="to">
+            <option value="USD">USD</option>
+        </select><br> <br>
+        <input type="button" onclick="convert()" value="Convert" />
+    </form>
+    <p id="showResult"></p>
+    <script>
+
+        function convert() {
+            var amount;
+            var from;
+            var to;
+            var convert;
+            amount = document.getElementById("amount").value;
+            from = document.getElementById("from").value;
+            to = document.getElementById("to").value;
+            if (from === "VND" && to === "USD") {
+                convert = amount / 23000 + "USD";
+            };
+            document.getElementById("showResult").innerHTML = "Result is " + convert;
+        }</script>
+</body>
+</html>

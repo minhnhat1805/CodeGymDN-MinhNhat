@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UngDungmaytinh</title>
+</head>
+<body>
+    <form>
+        Caculator<br>
+        <input type="number" id="first" size="30" />
+        <input type="number" id="second" size="30"/><br>
+
+       
+        <input type="button" onclick="Addition()" value="Addition(+)" />
+        <input type="button" onclick="Subtraction()" value="Subtraction(-)" />
+        <input type="button" onclick="Multiplication()" value="Multiplication(*)" />
+        <input type="button" onclick="Division()" value="Division(/)" />
+    
+    </form>
+    <p id="showResult"></p>
+    <script>
+        function Addition() 
+        {
+            var  first = parseInt(document.getElementById("first").value);
+            var second = parseInt(document.getElementById("second").value);
+            var tong = first +second ;
+            document.getElementById("showResult").innerHTML = "Tổng là " + tong;
+        }
+    </script>
+    <p id="showResult"></p>
+    <script>
+        function Subtraction() 
+        {
+            var  first = document.getElementById("first").value;
+            var second = document.getElementById("second").value;
+            var hieu = first -second ;
+            document.getElementById("showResult").innerHTML = "Hiệu  là " + hieu;
+        }
+    </script>
+    </script>
+    <p id="showResult"></p>
+    <script>
+        function Multiplication()
+        {
+            var  first = document.getElementById("first").value;
+            var second = document.getElementById("second").value;
+            var Tich = first *second ;
+            document.getElementById("showResult").innerHTML = "Tích  là " + Tich;
+        }
+    </script>
+    </script>
+    <p id="showResult"></p>
+    <script>
+        function Division()
+        {
+            var  first = document.getElementById("first").value;
+            var second = document.getElementById("second").value;
+            var Thuong = first /second ;
+            document.getElementById("showResult").innerHTML = "Thương  là " + Thuong;
+        }
+    </script>
+    
+</body>
+</html>
