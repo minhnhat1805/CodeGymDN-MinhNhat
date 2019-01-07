@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chuyển đổi met sang feet</title>
+    </head>
+    <body>
+        <form>
+            <input type="number" id="met" size="20"/><br>
+            <input type="button" onclick="Ketqua()" value="Kết quả :"/><br>
+ 
+        </form>
+        <p id="finish"></p>
+        <script>
+            function Ketqua() {
+                var met = parseFloat(document.getElementById("met").value);
+                var feet = met * 3.2808;
+                document.getElementById("finish").innerHTML= met +" mét bằng " + feet +" feet";
+            }
+        </script>
+    </body>
+</html>

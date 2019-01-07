@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Xếp hạng học lực</title>
+    </head>
+    <body>
+        <form>
+            <p>Điểm kiểm tra :</p>
+            <input type="number" id="test" size=10 /><br/>
+            <p>Điểm giữa kì:</p>
+            <input type="number" id="between"/><br/>
+            <p>Điểm cuối kì:</p>
+            <input type="number" id="finally"/><br/>
+            <p></p>
+            <input type="button" onclick="learningpower()" style="position:absolute; left:205px; top:195px;" value="Leaning"/>
+
+        </form>
+        <p id="show"></p>
+       <script>
+          function learningpower() {
+              var test;
+              var between;
+              var finish ;
+              var mark ;
+              test = document.getElementById("test").value;
+              between = document.getElementById("between").value;
+              finish = document.getElementById("finally").value;
+              mark = ((test *2) + (between*3) + (finish*5))/10 ;
+              if (mark >= 7.00) {
+                  if (mark < 8.50) {
+                      document.getElementById("show").innerHTML=mark+" là đạt học lực: KHÁ";
+                  }else {
+                    document.getElementById("show").innerHTML=mark+" là đạt học lực: GIỎI";
+                  }
+              } else {
+                  if (mark >= 5.50) {
+                    document.getElementById("show").innerHTML=mark+" là đạt học lực: TRUNG BÌNH";
+                  } else {
+                    document.getElementById("show").innerHTML=mark+" là đạt học lực: YẾU";
+                  }
+              }
+          }
+       </script> 
+    </body>
+</html>

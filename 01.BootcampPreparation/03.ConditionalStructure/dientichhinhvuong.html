@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tính diện tích hình vuông</title>
+    </head>
+    <body>
+        <form>
+            <input type="number" id="canh" size="20"/><br>
+            <input type="button" onclick="dientich()" value="Diện tích hình vuông là:"/><br>
+ 
+        </form>
+        <p id="finish"></p>
+        <script>
+            function dientich() {
+                var canh = parseFloat(document.getElementById("canh").value);
+                var dientich = Math.pow(canh,2) ;
+                document.getElementById("finish").innerHTML= "Diện tích hình vuông cạnh "+canh+ " là "+dientich;
+            }
+        </script>
+    </body>
+</html>

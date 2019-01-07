@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UngDungGoodFastCheap</title>
+</head>
+<form>
+    <form action="/action_page.php">
+        ỨNG DỤNG GOOD-FAST-CHEAP<br />
+        <label><input id="first" value="good" onclick="good()" type="checkbox" />Good</label> <br />
+        <label><input id="second" value="fast" onclick="fast()" type="checkbox" />Fast</label> <br />
+        <label><input id="thist" value="cheap" onclick="cheap()" type="checkbox" />Cheap</label> <br />
+    </form>
+</form>
+
+<body>
+    <script>
+        function fast() {
+            var good = document.getElementById("first").checked;
+            var fast = document.getElementById("second").checked;
+            var cheap = document.getElementById("thist").checked;
+            if (good && fast) {
+                document.getElementById("thist").checked = false;
+            }
+        }
+    </script>
+    <script>
+        function cheap() {
+            var good = document.getElementById("first").checked;
+            var fast = document.getElementById("second").checked;
+            var cheap = document.getElementById("thist").checked;
+            if (good && cheap) {
+                document.getElementById("second").checked = false;
+            }
+        }
+    </script>
+    <script>
+        function good() {
+            var good = document.getElementById("first").checked;
+            var fast = document.getElementById("second").checked;
+            var cheap = document.getElementById("thist").checked;
+            if (fast && cheap) {
+                document.getElementById("first").checked = false;
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

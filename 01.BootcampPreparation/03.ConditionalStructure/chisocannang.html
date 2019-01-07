@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TinhchisoBMI</title>
+</head>
+
+<body>
+    <script>
+        var weight = parseFloat(prompt("Nhập cân nặng"));
+        var height = parseFloat(prompt("Nhập chiều cao"));
+        var bmi = weight / (height*height);
+        console.log(bmi);
+        if (bmi >= 25) {
+            if (bmi < 30) {
+                alert("Overweight");
+            } else {
+                alert("Obese");
+            }
+        } else {
+            if (bmi >= 18.5) {
+                alert("normal");
+            } else {
+                alert("Underweight");
+            }
+        }    
+    </script>
+</body>
+
+</html>

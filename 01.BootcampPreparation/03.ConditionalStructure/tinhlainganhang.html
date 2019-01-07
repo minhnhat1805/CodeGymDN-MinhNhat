@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tính lãi ngan hang</title>
+    </head>
+    <body> 
+        <form> 
+                <input type="number" id="tiengui" size="20" /><br>
+                <input type="number" id="sothang" size="20" /><br>
+                <input type="number" id="laisuat" size="20" /><br>
+                <input type="button" onclick="lai()" value="Kiểm tra"/>
+        </form>
+        <p id="finish"></p>
+        <script>  
+        function lai() { 
+            var tien = parseFloat(document.getElementById("tiengui").value);
+            var thang = parseFloat(document.getElementById("sothang").value);
+            var laisuat = parseFloat(document.getElementById("laisuat").value);
+            var lai ;
+            lai = tien*(Math.pow(1+laisuat,thang)) - tien;
+            document.getElementById("finish").innerHTML="Lãi sau " +thang+ " tháng là: " +lai;
+        }
+        </script>
+    </body>
+</html>

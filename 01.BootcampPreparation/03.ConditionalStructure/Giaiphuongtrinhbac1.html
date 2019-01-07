@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 1</title>
+</head>
+
+<body>
+    <form>
+        <input type="number" id="a" size="20" /><br>
+        <input type="number" id="b" size="20" /><br>
+        <input type="button" onclick="Nghiem()" value="Nghiệm " /><br>
+
+    </form>
+    <p id="finish"></p>
+    <script>
+        function Nghiem() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var x;
+            x = -b / a;
+            if (a == 0) {
+                if (b == 0) {
+                    document.getElementById("finish").innerHTML = "Phương trình 0x + 0 = 0 có vô số nghiệm";
+                } else {
+                    document.getElementById("finish").innerHTML = "Phương trình 0x +b = 0 vô nghiệm";
+                }
+            } else {
+                if (b == 0) {
+                    document.getElementById("finish").innerHTML = "Phương trình ax + 0 =0 có nghiệm x = 0";
+                } else {
+                    document.getElementById("finish").innerHTML = "Phương trình " +a+"x + " +b+" = 0 có nghiệm x = " + x;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
