@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        tong
+    </title>
+</head>
+
+<body>
+    <script>
+        var tong = 0;
+        var num;
+        while (num != -1) {
+            num = parseInt(prompt("Nhập số"));
+            if (num != -1) {
+                document.write(num + " ,");
+                tong += num;
+            }
+        } 
+        document.write("<br/>");
+        document.write("Tổng các số vừa nhập là:" +"<br/>" + tong);
+    </script>
+</body>
+
+</html>

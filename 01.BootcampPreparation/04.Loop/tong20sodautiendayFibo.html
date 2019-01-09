@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dãy Fibonacy</title>
+</head>
+
+<body>
+    <script>
+        var a = 1;
+        var b = 1;
+        var i = 2;
+        var tong = 2;
+        document.write(a + " " + b)
+        while (i < 20) {
+            a = a + b;
+            tong += a;
+            b = b + a;
+            tong += b;
+            document.write(" " + a + " " + b);
+            i += 2;
+        } 
+        document.write("<br>");
+        document.write("Tổng 20 số đầu tiên trong dãy Fibonacy là:"+tong);
+    </script>
+</body>
+
+</html>

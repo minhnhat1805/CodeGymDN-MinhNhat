@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enter temperature:</title>
+</head>
+
+<body>
+    <script>
+           var tem = parseFloat(prompt("Enter temperature:"))
+           while (tem > 100 || tem < 20) {
+           if (tem>100) {
+               tem = parseFloat(prompt("Nhiệt độ quá cao , vui lòng giảm nhiệt độ:"))
+           }
+           if (tem<20) {
+            tem = parseFloat(prompt("Nhiệt độ quá thấp , vui lòng tăng nhiệt độ:"))
+           }
+        }
+    </script>
+</body>
+
+</html>

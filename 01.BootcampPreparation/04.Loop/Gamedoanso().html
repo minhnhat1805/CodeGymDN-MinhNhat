@@ -1,0 +1,39 @@
+<button onclick="play()">Play</button>
+<script>
+    
+
+   /* function randomInt(min, max) {
+        if (min == null && max == null) { 
+            return 0;
+        }
+        if (max == null) {
+            max = min;
+            min = 0;
+        }
+        return min + Math.floor(Math.random() * (max - min + 1));
+    }*/
+    function play() {
+
+        var from = parseInt(prompt("From"));
+        var to = parseInt(prompt("To"));
+
+        var ran =  to + Math.floor(Math.random() * (from - to + 1));
+        document.write(ran +"<br>");
+        var i=1;
+        while (i) {
+            var player = parseInt(prompt("Please guest a number"));
+            document.write("Lần thứ " + i + ":" + player +"<br>");
+
+            if (player === ran) {
+                alert("You right!");
+                break;
+            } else {
+                alert("You wrong!");
+            }
+            i++;
+        }
+        alert('you lose!');
+    }
+
+
+</script>

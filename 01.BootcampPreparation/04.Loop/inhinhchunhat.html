@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        In hình chữ nhật
+    </title>
+</head>
+
+<body>
+        <div style="text-align:100px; line-height: 15px;left:285px; font-size:170%;">
+    <b>
+        <script>
+            function in_hang() {
+                for (i = 1; i <= 21; i++) {
+                    document.write("*");
+                }
+            }
+            function in_hai_dau() {
+                for (i = 1; i <= 21; i++) {
+                    if (i >= 2 && i <= 20) {
+                        document.write("&nbsp ");
+                        continue; 
+                       
+                    }
+                    document.write("*");
+                }
+            }
+            for (j = 1; j <= 7; j++) {
+                if (j >= 2 && j <= 6) { 
+                    in_hai_dau();
+                    document.write("<br>");
+                    continue;
+                }
+                in_hang();
+                document.write("<br>")
+            }
+            
+
+        </script>
+    </b>
+</body>
+
+</html>

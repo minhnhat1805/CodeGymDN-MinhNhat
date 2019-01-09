@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Tính tổng từ 1 đến n
+        </title>
+    </head>
+    <body>
+        <form> 
+            <p>Nhập số </p>
+            <input type="number" id="number" size="20">
+            <input type="button" onclick="Tong()" value="Tổng">
+        </form>
+        <p id="finish"></p>
+        <script> 
+               function Tong() {
+                   var n = parseInt(document.getElementById("number").value);
+                   var tong = 0;
+                   for (var i =1;i<=n;i++) { 
+                       tong+=i;
+                       }
+                    document.getElementById("finish").innerHTML="Tổng từ 1 đến "+n+" là "+tong;
+               }
+
+        </script>
+    </body>
+</html>
