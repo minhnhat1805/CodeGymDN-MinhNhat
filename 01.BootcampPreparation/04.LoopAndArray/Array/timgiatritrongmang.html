@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tìm giá trị trong mảng</title>
+</head>
+
+<body>
+    <script>
+        var x = parseFloat(prompt("Enter a number:"));
+        var array = [2, 3, -2, 5, 7, 8, 9, 18, 15, 16];
+        document.write("Your array:");
+        for (var i = 0; i < array.length; i++) {
+            document.write(" " + array[i] + " ");
+        }
+        document.write("<br>");
+        for (var i = 0; i < array.length; i++) {
+            if (array[i] === x) {
+                document.write("Giá trị array[" + i + "] =  " + array[i]);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

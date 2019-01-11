@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF_8">
+    <title>XoaphantuTrongMang</title>
+</head>
+
+<body>
+    <script>
+        /* Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+ nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không,nếu V thuộc mảng đã cho xoá V khỏi mảng 
+ (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V,và gán 0 cho phần tử cuối cùng của mảng)*/
+        var number = [];
+        for (var i = 0; i < 10; i++) {
+            number[i] = prompt("Enter number:");
+        }
+        document.write("The original array is:");
+        document.write(number + " ");
+        document.write("<br>");
+        var test = prompt("Nhập giá trị kiểm tra:");
+
+        var vitri;
+        var x = 0;
+       // while ( vitri<number.length) {
+            for (var i = 0; i < number.length; i++) {
+                if (number[i] == test) {
+                    vitri = i;
+                    x = -1;
+                }
+            }
+            if (x != -1) {
+                alert("Không tìm thấy " + test);
+            } else {
+                for (var j = vitri; j < number.length - 1; j++) {
+                    number[j] = number[j + 1];
+                } number.length--;
+            }
+            document.write("Array after deleting is:" + number);
+      //  }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<form>
+    <input type="text" id="English">
+
+    <br>
+    <input type="button" id="Tran" onclick="Dich()" value="Dịch">
+</form>
+<p type="text" id="finish"></p>
+
+<script>
+    /*  Tạo 2 mảng có độ dài bằng nhau để lưu trữ danh sách các từ.
+     Mảng 1 lưu trữ các từ tiếng Anh, mảng 2 lưu trữ các từ tiếng Việt tương ứng.
+  Khi tìm kiếm, tìm vị trí của từ tiếng Anh trong mảng 1. Nếu tìm thấy thì hiển thị từ tiếng Việt ở cùng vị trí trong mảng 2.
+  Nếu không tìm thấy thì hiển thị thông báo không tìm thấy.*/
+    function Dich() {
+        var a = document.getElementById("English").value;
+        var El = ['Banana', 'lemon', 'computer'];
+        var Vi = ['Chuối','Chanh','máy tính'];
+        var x;
+        for (var i in El) {
+            if (a==El[i]) {
+                document.getElementById("finish").innerHTML=Vi[i];
+                x=1;
+                break;
+            } if (x!=1) {
+                document.getElementById("finish").innerHTML= "Không tìm thấy";
+            }
+        }
+
+
+    }
+
+</script>
+
+</html>

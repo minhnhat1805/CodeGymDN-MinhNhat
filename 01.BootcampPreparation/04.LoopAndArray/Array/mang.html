@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Khởi tạo mảng
+    </title>
+</head>
+<div id="result">
+<body>
+    <div style="font-size:170%;">
+        <b>
+            <p>Sample Screen:</p>
+        </b>
+    </div>
+    <input type="text" id="enter"></input>
+    <input type="button" id="Add" onclick="add()" value=" Add">
+    <input type="button" id="Display" onclick="display()" value=" Display">
+    
+</body>
+<script>
+        var x = 0;
+        var array = [];
+        function add() {
+            array[x] = document.getElementById("enter").value;
+            alert("Giá trị: " + array[x] + " Đã được thêm vào mảng.");
+            x++;
+            document.getElementById("enter").value;
+        }
+        function display() {
+        var e = "";  
+        for (var i=0; i<array.length; i++) {
+               e += "Element " + i + " = " + array[i] + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+}
+    </script>
+</html>

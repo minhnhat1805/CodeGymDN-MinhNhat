@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>NganCachSoChan></title>
+</head>
+<script>
+  /* var x = prompt("Nhập số:");
+    string(x);
+    document.write(string.split(" ").length);*/
+  var num = window.prompt();
+  var str = num.toString();
+  var Array = [str[0]];
+
+  for (var x = 1; x < str.length; x++) {
+    if (str[x - 1] % 2 === 0 && str[x] % 2 === 0) {
+      Array.push('-', str[x]);
+    } else {
+      Array.push(str[x]);
+    }
+  }
+  document.write(Array.join(''));
+
+</script>
+
+
+</html>

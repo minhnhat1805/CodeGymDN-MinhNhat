@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF_8">
-    <title>XoaphantuTrongMang</title>
+    <title>SăpXepphantuTrongMang</title>
 </head>
 
 <body>
@@ -17,7 +17,19 @@
         document.write("The original array is:");
         document.write(number + " ");
         document.write("<br>");
-     document.write (number.sort());
+        function sx() {
+            for (var i = 0; i < number.length - 1; i++) {
+                for (var j = i + 1; j < number.length; j++) {
+                    if (number[i] < number[j]) {
+                        var t = number[i];
+                        number[i] = number[j];
+                        number[j] = t;
+                    }
+                }
+            }
+        }
+        sx();
+   document.write(number);
     </script>
 </body>
 

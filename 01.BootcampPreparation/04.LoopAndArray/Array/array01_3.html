@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF_8">
+    <title>TimGiaTriTrungBinhTrongMang</title>
+</head>
+
+<body>
+    <script>
+        var Ar = [12, 1, -2, 10,34,9, 7, 11, 27, 23];
+        var max = Ar[0];
+        var x=0;
+        var tong=Ar[0];
+        for (var i = 1; i < Ar.length; i++) {
+            if (Ar[i] >= max) { 
+                max=Ar[i];
+                x=i;
+            }
+            tong+=Ar[i];
+        }
+        document.write("greatest value while is: Ar["+x+"] = "+max+"<br>");
+        document.write("Medium of array: "+tong/Ar.length);
+
+    </script>
+</body>
+
+</html>

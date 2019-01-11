@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tìm giá trị lớn nhất trong mảng</title>
+</head>
+
+<body>
+    <script>
+        var array = [2, 3, -2, 5, 7, 8, 9, 18, 15, 16];
+        document.write("Your array:");
+        for (var i = 0; i < array.length; i++) {
+            document.write(" " + array[i] + " ");
+        }
+        document.write("<br>");
+        var max = array[0];
+        var position;
+        for (var i = 1; i < array.length; i++) {
+          if (array[i]>max) {
+              max= array[i];
+              position=i;
+          }
+        } 
+        document.write("Giá trị lớn nhất trong mảng:"+max+" ở vị trí thứ "+position+" trong mảng.");
+    </script>
+
+</body>
+
+</html>
