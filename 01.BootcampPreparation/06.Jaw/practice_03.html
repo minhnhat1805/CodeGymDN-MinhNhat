@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>minArray</title>
+    </head>
+<body>
+    <script>
+var arr1= [0,0,0,0,0];
+function minArray(arr) {
+    if(arr.length == 0)
+        return 'koo';
+    var min = arr[0];
+
+    for(var i = 1; i < arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i];
+        }
+    }
+    return min;
+}
+function x(arr) {
+  
+    if(arr.length == 0)
+        return 'koo';
+    var min = arr[0];
+    var x=0;
+
+    for(var i = 1; i < arr.length; i++){
+        if(arr[i] < min){
+            min = arr[i];
+            x=i;
+        }
+    }
+    return x;
+}
+alert("arr["+x(arr1)+"] = "+minArray(arr1));
+</script>
+</body>
+</html>
+
