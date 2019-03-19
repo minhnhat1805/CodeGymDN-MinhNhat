@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Xóa phần tử trong bảng
+    </title>
+</head>
+
+<body>
+    <script>
+        var arr = ['DaNang ', 'University ', 'IoT', 'of ', 'Technology '];
+        var index = parseInt(prompt("Enter number"));
+        document.write("Your array: " + tryRemoveFromArray(arr, index));
+        /*Viết hàm tryRemoveFromArray nhận vào một mảng và một số nguyên index, 
+        trả về mảng ban đầu đã được loại bỏ phần tử tại vị trí index nếu index hợp lệ 
+        . Nếu index không hợp lệ , trả về mảng ban đầu */
+        function tryRemoveFromArray(arr, index) {
+            if (index >= 0 && index < arr.length) {
+                for (var i = index; i < arr.length; i++) {
+                    arr[i] = arr[i + 1];
+                } arr.length--;
+                return arr;
+            } else {
+                alert("Invalid input value");
+                return arr;
+            }
+        }
+    </script>
+</body>
+
+</html>

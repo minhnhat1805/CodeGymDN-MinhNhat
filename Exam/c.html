@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Kiểm tra số nguyên tố
+    </title>
+</head>
+
+<body>
+    <script> 
+    var numb = parseInt(prompt("Enter number:"));
+    if (isPrime(numb)) {
+        alert(numb+" is prime number.");
+    } else {
+        alert(numb+" isn't prime number.");
+    }
+        /*Viết hàm isPrime() nhận vào một số nguyên, trả về true nếu số đó là số nguyên tố 
+        và false nếu số đó không phải là số nguyên tố.*/
+        function isPrime(number) {
+            test = true;
+            if (number > 2) {
+                for (var i = 2; i <= number/2; i++) {
+                    if (number % i == 0) {
+                        test = false;
+                        break;
+                    }
+                }
+            } else { if (number<2) {
+                test= false;
+                }
+            }
+            return test;
+        }
+        
+    </script>
+</body>
+
+</html>

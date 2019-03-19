@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sum</title>
+</head>
+
+<body>
+    <script>
+        var number = parseInt(prompt("Enter number : "));
+        alert("Sum from 1 to " + number + " is: " + sumTo(number));
+
+        function sumTo(number) {
+            var sum = 0;
+            if (number > 0) {
+                for (var i = 1; i <= number; i++) {
+                    sum += i;
+                }
+                return sum;
+            } else {
+                return -1;
+            }
+        }
+    </script>
+</body>
+
+</html>

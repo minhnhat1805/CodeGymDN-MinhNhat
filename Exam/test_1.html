@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        var array = ['Nam', 'Minh', 'Long', 'Thắng', 'Khánh', 'Trang', 'Thảo', 'Nam', 'Phát', 'Nhật'];
+        var name = 'Minh';
+        alert("vị trí xuất hiện đầu tiên của tên " + name + " trong mảng là: " + findFirstIndexOfStudent(array, name));
+
+        function findFirstIndexOfStudent(array, name) {
+            var index = -1;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == name) {
+                    index = i;
+                    break;
+                }
+            }
+            return index;
+        }
+
+    </script>
+</body>
+
+</html>

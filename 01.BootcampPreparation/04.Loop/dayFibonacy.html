@@ -7,14 +7,16 @@
 
 <body>
     <script>
-        var a = 1;
+        var a = 0;
         var b = 1;
         var i = 2;
-        document.write(a+" "+b)
-        while (i < 20) {
-            a = a + b; b = b + a;
-            document.write(" " + a + " " + b);
-            i += 2;
+        document.write(a + " " + b)
+        while (i < 10) {
+            var c = a + b;
+            a = b;
+            b = c;
+            document.write(c+" ");
+            i++;
         }
     </script>
 </body>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc bóng đèn</title>
+</head>
+
+<body>
+    <script>
+
+        function SwitchButton() {
+            this.status = false;
+            this.lamp = null;
+            this.connectToLamp = function (elamp) {
+                /*Kết nối*/
+                this.lamp = elamp;
+            }
+            this.switchOff = function () {
+                this.lamp.turnOff();
+            }
+            this.switchOn = function () {
+                this.lamp.turnOn();
+            }
+        }
+
+        function ElectricLamp() {
+            this.status = false;
+            this.turnOff = function () {
+                console.log("light");
+            }
+            this.turnOn = function () {
+                console.log("not light");
+            }
+        }
+
+        var button = new SwitchButton();
+        var lamp = new ElectricLamp();
+        //Kết nối công tắc button với đèn lamp
+        button.connectToLamp(lamp);
+        for (var i = 0; i < 10; i++) {
+            button.switchOn();
+            button.switchOff();
+        }
+
+    </script>
+</body>
+
+</html>

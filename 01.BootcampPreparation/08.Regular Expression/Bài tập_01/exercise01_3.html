@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đếm nguyên âm phụ âm</title>
+    </head>
+    <body>
+        <script>
+           function count(str) {
+               array = str.split('');
+               regex1 =/[aeiouy]/i;
+               regex2 = /[bcdfghjklmnpqrstvwxz]/i;
+               countVowels = 0;
+               consonantCounting = 0;
+               for (var i=0;i<array.length;i++) {
+                   if (regex1.test(array[i])) {
+                       countVowels++;
+                   }
+                   if ( regex2.test(array[i])) {
+                       consonantCounting++;
+                   }
+               }
+               console.log("Số nguyên âm trong chuỗi là: " +countVowels);
+               console.log("Số phụ âm trong chuỗi là :"+consonantCounting)
+           }
+           var str = 'DaNang Universiry Of Technology';
+           count(str);
+        </script>
+    </body>
+</html>

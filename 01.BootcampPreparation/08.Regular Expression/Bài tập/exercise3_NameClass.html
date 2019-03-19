@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+                Name_Class
+        </title>
+    </head>
+    <body>
+        <script>
+         function testNameClass(str) {
+             regex =/^[CAP][0-9]{4}[GHIKLM]$/;
+             if (regex.test(str)) {
+                 return true;
+             } else {
+                 return false;
+             }
+            }
+            var nameClass = 'P0323A';//M0318G, P0323A  - false
+            console.log(testNameClass(nameClass));
+        </script>
+    </body>
+</html>

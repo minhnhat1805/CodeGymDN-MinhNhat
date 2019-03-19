@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Đếm số từ trong một chuỗi
+        </title>
+    </head>
+    <body>
+        <script>
+            //Đếm số từ trong một chuỗi
+        function countWord(str) {
+           array= str.split('');
+          regex = /[a-zA-Z]/;
+           var count =0;
+           for (var i=0;i<array.length;i++) {
+               if (regex.test(array[i])) {
+                 count++;
+               }
+           }
+           return count;
+        }
+        var str = 'Minh3nhat';
+        console.log(countWord(str));
+
+        </script>
+    </body>
+</html>

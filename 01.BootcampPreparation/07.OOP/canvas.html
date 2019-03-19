@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="500" height="200" style="border:1px solid #00FF00;"></canvas>
+
+<script>
+var c = document.getElementById("myCanvas");// ta tìm đến thẻ <canvas> thông qua id của nó
+var ctx = c.getContext("2d"); //gọi hàm getContext() (nhập chuỗi “2d” vào)
+
+// Đường thứ nhất
+ctx.beginPath(); // Khai báo vẽ đường thẳng mới
+ctx.moveTo(0,0); // Xác định điểm bắt đầu
+ctx.lineTo(500,200); // Xác định điểm kết thúc
+ctx.strokeStyle = '#0066FF' // Màu của đường thẳng
+ctx.stroke(); // Tiến hành vẽ
+
+// Đường thứ hai
+ctx.beginPath(); // Khai báo vẽ đường thẳng mới
+ctx.moveTo(0,200); // Xác định điểm bắt đầu
+ctx.lineTo(250,100); // Xác định điểm kết thúc
+ctx.strokeStyle = '#FFFF33' // Màu của đường thẳng
+ctx.lineWidth = 6; //Độ rộng
+ctx.stroke(); // Tiến hành vẽ
+
+//ve hcn
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0,0,150,75);
+
+
+
+</script>
+
+
+</body>

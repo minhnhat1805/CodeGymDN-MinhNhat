@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        The class describes the rectangle
+    </title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1500" height="750" style="border: 1px solid #01ff00"></canvas>
+
+    <script>
+
+        function Rectangle(ctx, x, y, long, wide) {
+            this.ctx = ctx;
+            this.long = long;
+            this.wide = wide;
+            this.x = x;
+            this.y = y;
+
+
+         /*   this.area = function () {
+                return this.long * this.wide;
+            } */
+         /*   this.getX = function () {
+                return this.x;
+            }
+            this.setX = function () {
+                 this.x = x;
+            }
+            this.getY = function () {
+                return this.y;
+            }
+            this.setY = function () {
+                this.y = y;
+            }
+           this.perimeter = function () {
+                return (this.long + this.wide) * 2;
+            } */
+            this.getLong = function () {
+                return this.long;
+            }
+            this.getWide = function () {
+                return this.wide;
+            }
+            this.setLong = function (long) {
+                this.long = long; 
+            }
+            this.setWide = function (wide) {
+                this.wide = wide;
+            }
+            this.draw = function () {
+                this.ctx.fillStyle = "red";
+                this.ctx.fillRect(this.x, this.y, this.long, this.wide);
+            
+            }
+        }
+
+       var ctx = document.getElementById("myCanvas").getContext("2d");
+        var rectangle1 = new Rectangle(ctx, 20, 20, 100, 50);
+       // var area = rectangle1.area();
+      //  var perimeter = rectangle1.perimeter();
+       /* var long = rectangle1.getLong();
+        var wide = rectangle1.getWide();*/
+        rectangle1.draw();
+        /*
+        alert(area);
+        alert(perimeter);
+        rectangle1.setLong(300);
+        rectangle1.setWide(200);
+        long = rectangle1.getLong();
+        wide = rectangle1.getWide();
+        */
+     /*   var rect2 = new Rectangle(ctx, 200, 200, long, wide);
+        var area = rect2.area();
+        var perimeter = rect2.perimeter();
+        alert(area);
+        alert(perimeter);
+        rect2.draw();*/
+
+    </script>
+</body>
+
+</html>

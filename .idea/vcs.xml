@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01.BootcampPreparation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01.BootcampPreparation/01.IntroductionProgramming/01.Baitap1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01.BootcampPreparation/01.IntroductionProgramming/02.IncludeJavaScript" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/01.BootcampPreparation/02.VariableAndDataTypes" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-cleancode-refactoring-exercise" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-cleancode-refactoring-method-extraction" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-cleancode-refactoring-renaming" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-cleancode-refactoring-variable-extraction" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java-server-time" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/java_back_end" vcs="Git" />
+  </component>
+</project>

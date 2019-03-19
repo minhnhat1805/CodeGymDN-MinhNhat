@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+  function Mobile(battery, status) {
+      //01.
+      this.battery = ((battery < 0 ? 0 : battery) > 100) ? 100 : battery;
+      //02 bộ nhớ tin nhắn soạn thảo
+      this.draftMemory = [];
+      //03 bộ nhớ hộp thư đến
+      this.inboxMemory = [];
+      //04 gửi tin nhắn
+      this.sentMemory = [];
+      //05 trạng thái hoạt động
+      this.status = status;
+      //06 chuc nang
+      this.isOn = function () {
+          return this.status;
+      }
+      //07
+      this.tunOffOn = function () {
+          this.status = this.status;
+      }
+      //08
+      this.changeBatterry = function () {
+          if (this.battery < 100) {
+              this.battery++;
+          }
+      }
+      //09 tạo tin nhắn
+      this.createMessage = function (message) {
+          this.draftMemory.push(message);
+      }
+      //10 nhập tin nhắn 
+      this.receiveMessage = function (message) {
+          this.inboxMemory.push(message);
+      }
+      //11 phương thức gửi tin nhắn
+      this.sendMessage = function (mobile) {
+          if (this.draftMemory.length > 0) {
+              var sendMessage = this.draftMemory.pop();   //?
+              this.sentMemory.push(sendMessage);
+              mobile.inboxMemory.push(sendMessage);
+          }
+      }
+      //12 đưa ra tin nhắn cho xem
+      this.showMessage = function () {
+          for (var index in this.inboxMemory) {
+              alert(this.inboxMemory[index]);
+          }
+      }
+      //13
+      this.reduceEnergy = function () {
+          if (this.battery > 0) {
+              this.battery--;
+          }
+      }
+  }
+  //14
+  var iPhone = new Mobile(99, true);
+  var nokia = new Mobile(80, false);
+  iPhone.createMessage("hello");
+  iPhone.sendMessage(nokia);
+  alert(nokia.showMessage());
+</script>

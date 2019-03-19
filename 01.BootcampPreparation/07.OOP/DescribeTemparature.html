@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>describe temparature</title>
+</head>
+
+<body>
+    <canvas id="Temparature" height="500" width="1000"></canvas>
+    <script>
+        function Temparature(temC) {
+            this.temC = temC;
+            this.temF = function () {
+                return (this.temC * 1.8) + 32
+            }
+            this.temK = function () {
+                return this.temC + 273;
+            }
+        }
+        var Temparature = new Temparature(25);
+        var temC =Temparature.temC;
+        var temF = Temparature.temF();
+        var temK = Temparature.temK();
+        document.write(temC+"độ C bằng "+temF+" độ F");
+        document.write("</br>");
+        document.write(temC+"độ C bằng "+temK+" K");
+    </script>
+</body>
+
+</html>

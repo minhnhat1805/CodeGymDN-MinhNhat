@@ -1,0 +1,66 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What
+            are browser developer tools</a> for more information).</p>
+
+</body>
+
+<script>
+    var person = {
+        name: {
+            first: 'Bob',
+            last: 'Smith',
+
+        },
+        age: 32,
+        gender: 'male',
+        interests: ['music', 'skiing'],
+        bio: function () {
+            alert(this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        },
+        greeting: function () {
+            alert('Hi! I\'m ' + this.name.first + '.');
+        }
+    };
+    // Để truy xuất các thuộc tính của đối tượng bạn có thể dụng cặp ngoặc vuông ("[]") thay cho dấu chấm ("."):
+
+    person.age;
+    person.name.first;
+    person.greeting()
+    // tạo ra các thành phần mới cho đối tượng
+    person['eyes'] = 'hazel';
+    person.farewell = function () { alert("Bye everybody!"); }
+    person['eyes'];
+    person.farewell();
+    /*cập nhật giá trị cho các thành phần đó bằng cách viết tên
+     thành phần (thuộc tính, phương thức) bạn muốn thiết lập sau dấu chấm hoặc cặp ngoặc vuông*/
+    person.age = 45;
+    person.name.first = "Craft";
+    console.log(person.name.first);
+    /*Một lợi ích khác của cặp ngoặc vuông là nó không chỉ được sử dụng cho việc thiết lập linh động các giá trị của thành phần
+     trong đối tượng mà còn thiết lập linh động cho tên của các thành phần. 
+    Giả sử chúng ta muốn người dùng có thể lưu trữ các loại giá trị tùy chọn cho dữ liệu người của họ,
+     bằng cách viết tên và giá trị của thành phần vào hai ô văn bản? Chúng ta có thể nhận được những giá trị đó như thế này:*/
+    var myDataName = nameInput.value;
+    var myDataValue = nameValue.value;
+    //chúng ta có thể thêm thành phần mới này với tên và giá trị cho đối tượng person như sau:
+
+    person[myDataName] = myDataValue;
+    /*Để kiểm tra việc này bạn hãy bổ sung các dòng mã sau, 
+    lưu ý là phải sau (bên ngoài) cặp ngoặc nhọn dùng để định nghĩa đối tượng person:*/
+    var myDataName = 'height';
+    var myDataValue = '1.75m';
+    person[myDataName] = myDataValue;
+    //Bây giờ hãy lưu tệp tin và tải lại trên trình duyệt và nhập nội dung sau vào ô văn bản:
+
+    person.height
+</script>
+
+</html>

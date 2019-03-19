@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Build Date class</title>
+</head>
+
+<body>
+    <script>
+        var MyDate = function (day, month, year) {
+            //Thuộc tính
+            this.day = day;
+            this.month = month;
+            this.year = year;
+            // Phương thức
+            this.getDay = function () {
+                return this.day;
+            }
+            this.getMonth = function () {
+                return  this.month;
+            }
+            this.getYear = function () {
+                return this.year;
+            }
+
+            this.setDay = function (day) {
+                this.day = day;
+            }
+            this.setMonth = function (month) {
+                this.month = month;
+            }
+            this.setYear = function (year) {
+                this.year = year;
+            }
+            function setDate(day, month, year) {
+                this.day = day;
+                this.month = month;
+                this.year = year;
+            }
+        } 
+        //date gọi là biến instance
+        var date = new MyDate(2, 2, 2007);
+        var day = date.getDay();
+        var month = date.getMonth();
+        var year = date.getYear();
+        alert(day+"/"+month+"/"+year);
+        date.setDay(12);
+        date.setMonth(11);
+        date.setYear(2018);
+        day = date.getDay();
+        month = date.getMonth();
+        year = date.getYear();
+        alert(day+"/"+month+"/"+year);
+
+
+    </script>
+</body>
+
+</html>

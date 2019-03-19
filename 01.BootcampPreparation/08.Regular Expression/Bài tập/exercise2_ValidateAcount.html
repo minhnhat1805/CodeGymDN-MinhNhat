@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+                Validate account
+        </title>
+    </head>
+    <body>
+        <script>
+         function testAccount(str) {
+             regex =/^[a-z0-9_]{6,}$/;
+             if (regex.test(str)) {
+                 return true;
+             } else {
+                 return false;
+             }
+            }
+            var account = 'nhad_sfdt';
+            console.log(testAccount(account));
+        </script>
+    </body>
+</html>
